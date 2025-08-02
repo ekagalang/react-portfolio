@@ -1,28 +1,38 @@
 {
-  "name": "client",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "rizki-portfolio",
+  "version": "1.0.0",
+  "description": "Senior Laravel Architect Portfolio",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "setup": "npm install && npm run install-all"
   },
-  "dependencies": {
-    "axios": "^1.6.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "keywords": [
+    "portfolio",
+    "laravel",
+    "react",
+    "fullstack",
+    "developer"
+  ],
+  "author": "Rizki Ahmad <hello@rizkidev.com>",
+  "license": "MIT",
+  "type": "commonjs",
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.3",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.1",
-    "vite": "^7.0.6"
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizkiahmad/portfolio.git"
   }
 }

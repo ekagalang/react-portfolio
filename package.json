@@ -1,22 +1,38 @@
 {
-  "name": "portfolio-app",
+  "name": "rizki-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Senior Laravel Architect Portfolio",
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run dev",
-    "client": "cd client && npm start",
+    "client": "cd client && npm run dev",
     "build": "cd client && npm run build",
+    "start": "cd server && npm start",
     "install-server": "cd server && npm install",
     "install-client": "cd client && npm install",
-    "install-all": "npm run install-server && npm run install-client"
+    "install-all": "npm run install-server && npm run install-client",
+    "setup": "npm install && npm run install-all"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "laravel",
+    "react",
+    "fullstack",
+    "developer"
+  ],
+  "author": "Rizki Ahmad <hello@rizkidev.com>",
+  "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizkiahmad/portfolio.git"
   }
 }
